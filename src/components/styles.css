@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+form {
+  width: 60%;
+  margin: 0 auto;
+}
+.error {
+  color: red;
+}
+.table {
+  width: 65% !important;
+  margin: 0 auto;
+}
+.table tr {
+  text-align: center;
+}
+.table tr .btn-btn {
+  display: flex;
+  justify-content: space-around;
+}
