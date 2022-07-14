@@ -3,10 +3,8 @@ import "./styles.css";
 import * as Yup from "yup";
 import { useState } from "react";
 import { useFormik } from "formik";
-
+import { REQUIRED, NUMBER_VALID } from "./myConstant.js";
 const EditForm = (props) => {
-  const REQUIRED = "Yêu cầu nhập đủ thông tin!";
-  const NUMBER_VALID = "Phần số lượng bắt buộc nhập số!";
   const [bookediting, setBookEditing] = useState(null);
   const formik = useFormik({
     initialValues: {

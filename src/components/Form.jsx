@@ -4,9 +4,8 @@ import * as Yup from "yup";
 import { useState } from "react";
 import { Formik } from "formik";
 import EditForm from "./EditForm";
+import { REQUIRED, NUMBER_VALID } from "./myConstant.js";
 export default function Form() {
-  const REQUIRED = "Yêu cầu nhập đủ thông tin!";
-  const NUMBER_VALID = "Phần số lượng bắt buộc nhập số!";
   const [store, setStore] = useState([]);
   return (
     <div className="container">
