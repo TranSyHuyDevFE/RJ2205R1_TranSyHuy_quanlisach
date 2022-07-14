@@ -50,12 +50,14 @@ export default function Form() {
                   <label className="error">{formik.errors.number}</label>
                 )}
               </div>
-              <br />
-              <button type="submit" className="btn btn-warning">
+              <button
+                type="submit"
+                style={{ margin: "10px" }}
+                className="btn btn-warning"
+              >
                 Submit
               </button>
             </form>
-            <br />
           </>
         )}
       </Formik>
