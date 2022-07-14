@@ -5,16 +5,16 @@ import { useState } from "react";
 import { Formik } from "formik";
 import EditForm from "./EditForm";
 export default function Form() {
+  const REQUIRED = "Yêu cầu nhập đủ thông tin!";
+  const NUMBER_VALID = "Phần số lượng bắt buộc nhập số!";
   const [store, setStore] = useState([]);
   return (
     <div className="container">
       <Formik
         initialValues={{ title: "", number: "" }}
         validationSchema={Yup.object({
-          title: Yup.string().required("Yêu cầu nhập đủ thông tin!"),
-          number: Yup.number()
-            .typeError("Phần số lượng bắt buộc nhập số!")
-            .required("Yêu cầu nhập đủ thông tin!"),
+          title: Yup.string().required(REQUIRED),
+          number: Yup.number().typeError(NUMBER_VALID).required(REQUIRED),
         })}
         onSubmit={(values, { resetForm }) => {
           resetForm({ values: "" });
